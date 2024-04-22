@@ -1,0 +1,4 @@
+1. count the outer number of lines:rows
+2. count the inner loop:columns-> and connect them somehow to rows
+3. print the pattern in side the inner loop
+4. observe symmetry(optional)
