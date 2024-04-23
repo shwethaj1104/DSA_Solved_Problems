@@ -37,14 +37,13 @@ for(let i=0;i<=n-1;i++){
 //if we just need to find if the match is there or not follow below approach
 
 //sort the array---[2,5,6,8,11]
-// now add left and right index--if it is lesser which means we ahve to incraese the count--left++, if it is greater then we have to decrease the count-->right--
+// now add left and right index--if it is lesser which means we have to increase the count--left++, if it is greater then we have to decrease the count-->right--
 
 
 function best2Sum(arr,n,target){
 let left=0;
 let right=n-1;
 arr=arr.sort(function (a, b) {  return a - b;  })//o(nlogn)
-console.log("arrr",arr)
 while(left<right){
     if(arr[left]+arr[right]===target){return "yes"}
     else if(arr[left]+arr[right]<target){left++}
