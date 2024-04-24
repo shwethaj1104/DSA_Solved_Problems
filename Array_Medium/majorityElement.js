@@ -38,9 +38,9 @@ const bettermajority=(arr,n)=>{
 }
 // console.log("majority elemenet is--",bettermajority(arr,arr.length))
 
-//optimal solutions-----> moore's voting algorithm
+//Optimal solutions-----> moore's voting algorithm
 // iterate over the array
-//consier element=arr[0] for the first time
+//consider element=arr[0] for the first time
 //increment count if arr[i]===element
 //decerement count if arr[i]!==element
 //if count===0 --> make count as 1, and consider element=arr[i+1]
