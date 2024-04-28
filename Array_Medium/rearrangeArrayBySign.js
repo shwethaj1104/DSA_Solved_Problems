@@ -55,7 +55,7 @@ for(let i=0;i<=n-1;i++){
 // variety 2::::::::
 let arr1=[1,2,-4,-5,3,6]
 // output=[1,-4,2,-5,3,6]
-// if thr problem states that it is not sure if the positives are equal to negatives
+// if the problem states that it is not sure if the positives are equal to negatives
 
 
 //TC=N+N/2+ --> O(2N)

@@ -1,6 +1,6 @@
 let arr=[10,22,12,3,0,6]
 //output=[22,12,6]
-//when the element in an array after the number is smaller then itself then it is a leader
+//when the element in an array, after which all the number is smaller then itself, then it is a leader
 
 //TC=O(n**2) --> near
 //SC=O(n) --> worst case

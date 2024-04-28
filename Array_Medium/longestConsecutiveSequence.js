@@ -1,7 +1,7 @@
 let arr=[102,4,100,1,101,3,2,1,1,5]
 
 // consecutive sequences for example are [1,2,3,4], [100,101,102]
-// the longest among all the consecutive sequences in given array is [1,2,3,4,5] with length=4
+// the longest among all the consecutive sequences in given array is [1,2,3,4,5] with length=5
 //TC=o(n**2)
 //SC=O(1)
 const linearSearch=(arr,num,n)=>{
