@@ -85,3 +85,51 @@ const optimalFindRow=(row)=>{
 
 
 //PROBLEM 3: Print entire pascal's triangle for given n or rows
+//brute force approch
+//TC=O(row^^3)
+//SC=O(1) NO computaion storage, to store=O(2*srow*column)
+const findnCr=(row,column)=>{
+    let res=1
+    for(let i=0;i<column;i++){
+        res=res*(row-i)
+        res=res/(i+1)
+    }
+    return res
+}
+const pascalTriangle=(row)=>{
+    let output=new Array()
+    for(let i=1;i<=row;i++){
+    let temp=new Array()
+    let res=1
+        for(let j=1;j<=i;j++){
+            temp.push(findnCr(i-1,j-1))
+        }
+        output.push(temp)
+    }
+    return output
+}
+// console.log("pascal's traingle of length row is",pascalTriangle(row))
+
+//OPTIMAL APPROACH using problem 2 solution
+
+//TC=O(row*row)
+//SC=O(1) // O(2*row*row)
+
+const generateRows=(i)=>{
+    let res=1
+    let temp=new Array()
+    for(let j=1;j<=i;j++){
+        temp.push(res)
+        res=res*(i-j)/j
+    }
+    return temp
+}
+
+const printPascalTriangle=(row)=>{
+    let output=new Array()
+for(let i=1;i<=row;i++){
+    output.push(generateRows(i))
+    }
+return output
+}
+console.log("pascal's traingle of length row is",printPascalTriangle(row))
