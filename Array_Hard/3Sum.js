@@ -45,17 +45,15 @@ for(let i=0;i<=n-1;i++){
 const ThreeSumOptimal=(arr,n)=>{
     let output=new Array()
 for(let i=0;i<=n-1;i++){
-    let map=new Map()
+    let map=new Map()//we have to clear map for every new i to j iteration to store only elements between i to j without duplicate indexes, so declaring it over here
     for(let j=i+1;j<=n-1;j++){
-        for(let k=j+1;k<=n-1;k++){
             let kElement=-(arr[i]+arr[j])
             if(map.has(kElement)){
                 let temp=[arr[i],arr[j],kElement]
                 temp.sort((a,b)=>a-b)
                 output.push(temp)
                             }
-            map.set(arr[j])
-        }
+            map.set(arr[j])//inserting what ever is in between i and j for the index of k to map
     }
 }
     //store the set in the answer:
@@ -63,7 +61,7 @@ for(let i=0;i<=n-1;i++){
     output = Array.from(set).map(JSON.parse);
     return output
 }
-// console.log("three sum ",ThreeSumOptimal(arr,arr.length))
+console.log("three sum better",ThreeSumOptimal(arr,arr.length))
 
 //OPTIMAL APPROACH
 // 2 pointer approach
@@ -103,4 +101,4 @@ const optimal3sum=(arr,n)=>{
     }
     return output
 }
-    console.log("3 sum for given array",optimal3sum(arr,arr.length))
+    // console.log("3 sum for given array",optimal3sum(arr,arr.length))
