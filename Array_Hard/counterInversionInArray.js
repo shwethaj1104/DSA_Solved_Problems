@@ -71,8 +71,6 @@ return mergeSort(arr,0,n-1)
 // return countOptimal
 }
 
-// let n=arr1.length
-// mergeSort(arr1,0,n-1)
 console.log("optimal:counter inversion",optimalCounterinversion(arr))
 
 //time complexity for mergeSort function that is dividing --o(log base 2 n)
